@@ -20,28 +20,16 @@ class AssignmentServiceImpl extends AssignmentService{
   }
   
   @override
-  Future<ApiResponse> deleteAssignment(String token, String id) {
-    // TODO: implement deleteAssignment
-    throw UnimplementedError();
-  }
-  
-  @override
-  Future<ApiResponse> editAssignment(AssignmentModel asssignmentModel, String token, String id) {
-    // TODO: implement editAssignment
-    throw UnimplementedError();
-  }
-  
-  // @override
-  // Future<ApiResponse> deleteAssignment(String token, String id) async{
-  //   String url="${ApiConst.baseUrl+ApiConst.deleteAssignmentApi}$id/";
-  //  ApiResponse response=await api.delete(url,token: token);
-  //  return response;
-  //  }
+  Future<ApiResponse> deleteAssignment(String token, String id) async{
+    String url="${ApiConst.baseUrl+ApiConst.deleteAssignmentApi}$id/";
+   ApiResponse response=await api.delete(url,token: token);
+   return response;
+   }
    
-    //  @override
-    //  Future<ApiResponse> editAssignment(AssignmentModel editAsssignmentModel, String token,String id)async {
-    // String url="${ApiConst.baseUrl+ApiConst.editAssignmentApi}$id/";
-    //   ApiResponse response=await api.put(ApiConst.baseUrl, editAsssignmentModel);
-    //   return response;
-    //  }
+     @override
+     Future<ApiResponse> editAssignment(AddAssignmentModel editAsssignmentModel, String token,String id)async {
+    String url="${ApiConst.baseUrl+ApiConst.editAssignmentApi}$id/";
+      ApiResponse response=await api.put(url, editAsssignmentModel,token: token);
+      return response;
+     }
 }
