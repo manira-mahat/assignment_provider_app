@@ -9,6 +9,7 @@ class Routes {
   // static const resetPasswordRoute = "/resetPassword";
   static const homeRoute = "/home";
   static const bottomNavbarRoute = "/bottomNavbar";
+    static const addNotice = "/addNotice";
   // static const carDetailsRoute = "/carDetails";
   // static const carBookingRoute = "/carBooking";
   // static const addCarDetailsRoute = "/addCarDetails";

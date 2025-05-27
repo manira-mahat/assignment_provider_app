@@ -6,6 +6,7 @@ import 'package:provider_test1/features/home/view/bottom_navbar1.dart';
 import 'package:provider_test1/features/home/view/home1.dart';
 import 'package:provider_test1/features/login/view/login1.dart';
 import 'package:provider_test1/features/login/view/register1.dart';
+import 'package:provider_test1/features/notices/view/add_notice.dart';
 import 'package:provider_test1/utils/route_const.dart';
 
 class RouteGenerator {
@@ -29,6 +30,17 @@ class RouteGenerator {
       context,
       generateRoute(RouteSettings(name: route, arguments: arguments)),
       (route) => false,
+    );
+  }
+
+  static navigateToPageReplacement(
+    BuildContext context,
+    String route, {
+    dynamic arguments,
+  }) {
+    Navigator.pushReplacement(
+      context,
+      generateRoute(RouteSettings(name: route, arguments: arguments)),
     );
   }
 
@@ -66,15 +78,16 @@ class RouteGenerator {
         print(settings.arguments);
         return PageRouteBuilder(
           transitionDuration: const Duration(milliseconds: 600),
-          pageBuilder: (_, __, ___) => AddAssignment(
-            assignmentModel: settings.arguments as AssignmentModel,
-          ),
+          pageBuilder:
+              (_, __, ___) => AddAssignment(
+                assignmentModel:
+                    settings.arguments != null
+                        ? settings.arguments as AssignmentModel
+                        : null,
+              ),
         );
-      // case Routes.carBookingRoute:
-      //   return PageRouteBuilder(
-      //       pageBuilder: (_, __, ___) => CarBookingPage(
-      //             carDetail: settings.arguments as Car,
-      //           ));
+      case Routes.addNotice:
+        return PageRouteBuilder(pageBuilder: (_, __, ___) => AddNoticeForm());
       // case Routes.addCarDetailsRoute:
       //   return PageRouteBuilder(
       //     pageBuilder: (_, __, ___) => AddCarForm(
@@ -96,7 +109,8 @@ class RouteGenerator {
 
       // case Routes.notificationRoute:
       //   return PageRouteBuilder(
-      //       pageBuilder: (_, __, ___) => const NotificationPage());
+      //     pageBuilder: (_, __, ___) => const NotificationsPage(),
+      //   );
       default:
         return PageRouteBuilder(
           pageBuilder:

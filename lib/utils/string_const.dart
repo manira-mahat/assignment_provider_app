@@ -16,6 +16,7 @@ String registerMessageStr="Account successfully created";
 String registerMessageFailedStr="Account Failed to create";
 
 String addAssignmentStr="Add Assignment";
+String editAssignmentStr="Update Assignment";
 String getAssignmentStr="Get Assignment";
 String subjectNameStr="Subject Name";
 String semesterStr="Semester";
@@ -53,3 +54,12 @@ const String deleteAssignmentTitleStr="Delete Assignment ";
 const String deleteAssignmentMessageConfirmStr="Do you really want to delete assignment: ";
 const String deleteAssignmentSuccessStr="Successfully deleted ";
 const String deleteAssignmentFailedStr="Failed to delete Assignment ";
+
+//notice part
+const String addNoticeStr="Add Notice";
+const String editNoticeStr="Edit Notice";
+const String addNoticeSuccessStr="Notice added Successfully";
+const String editNoticeSuccessStr="Notice Updated Successfully";
+const String addNoticeFailedStr="Failed to add Notice";
+const String editNoticeFailedStr="Failed to edit Notice";
+// const String validate
