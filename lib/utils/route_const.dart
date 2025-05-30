@@ -9,12 +9,11 @@ class Routes {
   // static const resetPasswordRoute = "/resetPassword";
   static const homeRoute = "/home";
   static const bottomNavbarRoute = "/bottomNavbar";
-    static const addNotice = "/addNotice";
-  // static const carDetailsRoute = "/carDetails";
+  static const notificationRoute = "/notification";
+  static const addNotice = "/addNotice";
   // static const carBookingRoute = "/carBooking";
   // static const addCarDetailsRoute = "/addCarDetails";
   // static const viewCarListRoute = "/viewCarList";
   // static const settingsRoute = "/settings";
 
-  // static const notificationRoute = "/notification";
 }

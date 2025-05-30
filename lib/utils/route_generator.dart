@@ -7,6 +7,7 @@ import 'package:provider_test1/features/home/view/home1.dart';
 import 'package:provider_test1/features/login/view/login1.dart';
 import 'package:provider_test1/features/login/view/register1.dart';
 import 'package:provider_test1/features/notices/view/add_notice.dart';
+import 'package:provider_test1/utils/notifications_page.dart';
 import 'package:provider_test1/utils/route_const.dart';
 
 class RouteGenerator {
@@ -107,10 +108,10 @@ class RouteGenerator {
       //               ? settings.arguments as Users
       //               : null));
 
-      // case Routes.notificationRoute:
-      //   return PageRouteBuilder(
-      //     pageBuilder: (_, __, ___) => const NotificationsPage(),
-      //   );
+      case Routes.notificationRoute:
+        return PageRouteBuilder(
+          pageBuilder: (_, __, ___) => const NotificationsPage(),
+        );
       default:
         return PageRouteBuilder(
           pageBuilder:
